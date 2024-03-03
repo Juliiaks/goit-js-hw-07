@@ -2,4 +2,10 @@
     display: flex;
     row-gap: 48px;
     column-gap: 24px;
+
+}
+
+img{
+    width: 360px;
+    height: 300px;
 }

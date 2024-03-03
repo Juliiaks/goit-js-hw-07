@@ -31,15 +31,15 @@ const images = [
 const gal = document.querySelector(".gallery");
 
 const photo = document.createElement("img");
-photo.url = "<https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260>";
+photo.src = 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260';
 photo.alt = "White and Black Long Fur Cat";
 
 const photoTwo = document.createElement("img");
-photoTwo.url = "<https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260>";
+photoTwo.src = 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260';
 photoTwo.alt = "Orange and White Koi Fish Near Yellow Koi Fish";
 
 const photoThree = document.createElement("img");
-photoThree.url = "<https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260>";
+photoThree.src = 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260';
 photoThree.alt = "Group of Horses Running";
 
 gal.append(photo, photoTwo, photoThree);
