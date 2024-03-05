@@ -20,24 +20,26 @@ function handleClick() {
     if (boxCount >= 1 && boxCount <= 100) {
       createBoxes(boxCount);
       input.value = " ";
-      input.reset();
-    }
-}
+      input.reset;
+    } 
+} 
 
 function createBoxes(amount) {
   for (let i = 0; i < amount; i++){
     const newBoxes = document.createElement("div");
-      newBoxes.style.width = "30px";
-      newBoxes.style.height = "30px";
+      newBoxes.style.width = `${30 + i * 10}px`;
+      newBoxes.style.height = `${30 + i * 10}px`;
       newBoxes.style.backgroundColor = getRandomHexColor();
-      divBoxes.append(newBoxes)
+    divBoxes.append(newBoxes);
       
   }
   
 }
 
-btnDestroy.addEventListener("click",  => divBoxes.remove(newBoxes))
+btnDestroy.addEventListener("click", removeBoxes);
 
 function removeBoxes() {
-  
-}
+    divBoxes.innerHTML = " ";
+  }
+
+
