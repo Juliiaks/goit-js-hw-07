@@ -28,18 +28,29 @@ const images = [
   },
 ];
 
-const gal = document.querySelector(".gallery");
+const gallery = document.querySelector(".gallery");
 
-const photo = document.createElement("img");
-photo.src = 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260';
-photo.alt = "White and Black Long Fur Cat";
 
-const photoTwo = document.createElement("img");
-photoTwo.src = 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260';
-photoTwo.alt = "Orange and White Koi Fish Near Yellow Koi Fish";
 
-const photoThree = document.createElement("img");
-photoThree.src = 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260';
-photoThree.alt = "Group of Horses Running";
+function createGallery(arr) {
+  return arr.map(({ url, alt }) => {
+    const li = document.createElement("li");
+    const img = document.createElement("img");
+    img.src = url;
+    img.aly = alt;
+    li.append(img)
+    return li
+  })
+}
+const galleryMarkup = createGallery(images);
+gallery.append(...galleryMarkup);
+ 
 
-gal.append(photo, photoTwo, photoThree);
+// Variant 2
+
+// const imagesObj = images
+//   .map(({url, alt}) => {
+//      return `<li><img  src="${url}" alt="${alt}" width="250"/></li>`})
+//   .join(" ");
+// gallery.insertAdjacentHTML("beforeend", imagesObj);  
+

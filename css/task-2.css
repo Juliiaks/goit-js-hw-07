@@ -2,10 +2,15 @@
     display: flex;
     row-gap: 48px;
     column-gap: 24px;
+    flex-wrap: wrap;
 
 }
 
 img{
     width: 360px;
     height: 300px;
+}
+
+li{
+    list-style-type: none;
 }
