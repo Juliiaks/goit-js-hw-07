@@ -37,7 +37,7 @@ function createGallery(arr) {
     const li = document.createElement("li");
     const img = document.createElement("img");
     img.src = url;
-    img.aly = alt;
+    img.alt = alt;
     li.append(img)
     return li
   })
